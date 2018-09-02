@@ -1,27 +1,10 @@
 package cn.wzy.service;
 
-import cn.wzy.dao.ClassDao;
-import cn.wzy.dao.UserDao;
-import cn.wzy.DI.Inject;
-
 /**
- * Create by Wzy
- * on 2018/8/3 14:29
- * 不短不长八字刚好
+ * @author wzy 不短不长八字刚好.
+ * @since 2018/9/2 14:21
  */
-public class UserService {
+public interface UserService {
 
-    @Inject
-    private UserDao userDao;
-
-    @Inject
-    private ClassDao classDao;
-
-    public void save() {
-        userDao.save();
-        classDao.save();
-    }
-
-    public UserService() {
-    }
+	String sayHello(Integer id,String name);
 }
