@@ -1,4 +1,8 @@
-# 学习spring ioc源码分析  
+# 学习spring ioc源码分析   
+## spring提供的主要IOC容器：
+* ClassPathXmlApplicationContext  
+* FileSystemXmlApplicationContext  
+* XmlBeanFactory（废弃）
 ## 重要的类（或者接口）：  
 * ***BeanFactory*** ：定义一系列的获取bean或者判断是否单例之类的方法  
 * ***BeanDefinition*** ：Bean对象在Spring实现中是以BeanDefinition来描述的，Bean的定义类   
