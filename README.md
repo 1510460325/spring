@@ -22,9 +22,10 @@ Definition中含有一个getBeanClassName（）获取bean的class
 1.调用资源加载器的获取资源方法resourceLoader.getResource(location)，从配置文件中加载成spring资源Resource  
 2.再用BeanDefinitionReader将Resource加载成Document对象  
 3.从Document中解析出BeanDefinition包装成BeanDefinitionHolder对象 （类的结构如下）  
-![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)  
+![Image text](https://raw.githubusercontent.com/1510460325/springframework/master/imgs/2.png)  
 4.将解析好的BeanDefinitionHolder对象向IOC容器中注册  
   
 ## BeanFactory （注册）：  
 ***容器存储原理***  
 DefaultListableBeanFactory中含有一个Map<String, BeanDefinition> beanDefinitionMap存储名字和Bean定义的映射。  
+![Image text](https://raw.githubusercontent.com/1510460325/springframework/master/imgs/1.png)  
