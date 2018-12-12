@@ -43,3 +43,8 @@ DefaultListableBeanFactory中含有一个Map<String, BeanDefinition> beanDefinit
 ## 依赖注入过程：  
 ***工作类BeanWrapper***：封装Bean的类  
 大量采用jdk的反射和内省机制，用到BeanDefinition中的PropertyValues，实现对Bean属性的查找和设置
+### java内省机制：Introspector  
+* PropertyDescriptor propertyDescriptor = new PropertyDescriptor("username",User.class);找到对属性的描述  
+* 通过propertyDescriptor.getWriteMethod()获得这个属性的setter方法  
+* 通过propertyDescriptor.getReadMethod()获得这个属性的getter方法 
+* 就可以调用这些方法设置属性的值或者获取属性的值
