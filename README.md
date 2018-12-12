@@ -33,3 +33,13 @@ Definition中含有一个getBeanClassName（）获取bean的class
 ***容器存储原理***  
 DefaultListableBeanFactory中含有一个Map<String, BeanDefinition> beanDefinitionMap存储名字和Bean定义的映射。  
 ![Image text](https://raw.githubusercontent.com/1510460325/springframework/master/imgs/1.png)  
+
+# spring的依赖注入  
+## 主要方法：
+* .createBeanInstance：生成Bean所包含的java对象实例。
+* .populateBean ：对Bean属性的依赖注入进行处理。
+## 创建过程：  
+***工作类BeanFactory***：大量通过jdk的构造器反射创建和cglib的创建  
+## 依赖注入过程：  
+***工作类BeanWrapper***：封装Bean的类  
+大量采用jdk的反射和内省机制，用到BeanDefinition中的PropertyValues，实现对Bean属性的查找和设置
