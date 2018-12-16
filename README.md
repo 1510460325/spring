@@ -48,3 +48,13 @@ DefaultListableBeanFactory中含有一个Map<String, BeanDefinition> beanDefinit
 * 通过propertyDescriptor.getWriteMethod()获得这个属性的setter方法  
 * 通过propertyDescriptor.getReadMethod()获得这个属性的getter方法 
 * 就可以调用这些方法设置属性的值或者获取属性的值
+# spring MVC的流程分析
+## 重要的类：  
+* HandlerMapping：处理url和自己写的方法的映射
+* HandlerAdapter：handle的适配器对象，完成对数据验证、转换、格式化工作，调用真实的handle返回ModelAndView对象
+* ViewResolver：将ModelAndView转换成我们view返回给用户
+
+流程：
+![1](./imgs/3.png)
+![1](./imgs/4.png)
+![1](./imgs/5.png)
