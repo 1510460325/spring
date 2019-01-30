@@ -1,16 +1,15 @@
 package cn.wzy;
 
+import cn.wzy.service.UserService;
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
-import org.springframework.core.io.FileSystemResource;
 
 public class SpringTest {
 
 	public static void main(String[] args) {
-		BeanFactory factory = new ClassPathXmlApplicationContext("asdf");
-		BeanFactory factory1 = new FileSystemXmlApplicationContext("asdf");
-		BeanFactory factory2 = new XmlBeanFactory(new FileSystemResource("asdf"));//废弃
+		BeanFactory factory = new ClassPathXmlApplicationContext("ApplicationContext.xml");
+		UserService service = (UserService) factory.getBean("bean1");
+		UserService service1 = (UserService) factory.getBean("bean1");
+		System.out.println(service == service1);
 	}
 }
